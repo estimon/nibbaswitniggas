@@ -20,13 +20,20 @@ namespace WeatherApp
 
             button.Click += Button_Click;
 
-            
+
         }
         private async void Button_Click(object sender, System.EventArgs e)
         {
+            var cityinput = FindViewById<EditText>(Resource.Id.Input1);
+
             var textview = FindViewById<TextView>(Resource.Id.textView1);
-            var weather = await Core.Core.GetWeather("asd");
+            var textview1 = FindViewById<TextView>(Resource.Id.textView2);
+            var textview2 = FindViewById<TextView>(Resource.Id.textView3);
+            var weather = await Core.Core.GetWeather(cityinput.Text);
+            
             textview.Text = weather.Temperature;
+            textview.Text = weather.temp_min + " / " + weather.temp_max;
+            
             
         }
     }
