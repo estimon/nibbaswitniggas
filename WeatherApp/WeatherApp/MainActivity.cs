@@ -31,8 +31,9 @@ namespace WeatherApp
             var textview2 = FindViewById<TextView>(Resource.Id.textView3);
             var weather = await Core.Core.GetWeather(cityinput.Text);
             
-            textview.Text = weather.Temperature;
-            textview.Text = weather.temp_min + " / " + weather.temp_max;
+            textview.Text = weather.pressure;
+            textview1.Text = weather.temp_min + " / " + weather.temp_max;
+            
             
             
         }

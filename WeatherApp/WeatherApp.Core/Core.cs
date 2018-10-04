@@ -14,7 +14,7 @@ namespace WeatherApp.Core
 
             dynamic results = await DataService.GetDataFromService(queryString).ConfigureAwait(false);
             var weather = new Weather();
-            weather.Temperature = (string)results["main"]["temp"] + " C";
+            weather.pressure = (string)results["main"]["pressure"] + " xd";
             weather.temp_max = (string)results["main"]["temp"] + " C";
             weather.temp_min = (string)results["main"]["temp"] + " C";
 

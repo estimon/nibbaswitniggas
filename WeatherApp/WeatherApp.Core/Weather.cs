@@ -11,5 +11,6 @@ namespace WeatherApp.Core
         public string Temperature { get; set; } = " ";
         public string temp_min { get; set; } = " ";
         public string temp_max { get; set; } = " ";
+        public string pressure { get; set; } = " ";
     }
 }
